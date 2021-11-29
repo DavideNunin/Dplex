@@ -1,3 +1,0 @@
-/home/pi/Desktop/Dplex/CMakeFiles/rebuild_cache.dir
-/home/pi/Desktop/Dplex/CMakeFiles/Dplex.dir
-/home/pi/Desktop/Dplex/CMakeFiles/edit_cache.dir

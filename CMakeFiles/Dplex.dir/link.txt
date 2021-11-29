@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++14 -g  -rdynamic CMakeFiles/Dplex.dir/main.cpp.o CMakeFiles/Dplex.dir/library.cpp.o CMakeFiles/Dplex.dir/withparam.cpp.o  -o Dplex 
