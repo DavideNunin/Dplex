@@ -5,21 +5,19 @@ using namespace std;
 #include <iomanip>
 #include "header.h"
 
-void printA(int m,int n, int** A){
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++){
-            cout<<A[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-}
 
-void print_matrix(matrix m){
+void print_problem(problem m){
     cout<<"Matrice\n";
+    cout<<"z = ";
+    for(int i=0;i<m.cols;i++){
+        cout<<setw(8)<<m.f[i]<<" ";
+    }
+    cout<<endl;
     for(int i=0;i<m.rows;i++){
         for(int j=0;j<m.cols;j++){
-            cout<<setw(10)<<m.A[i][j]<<" ";
+            cout<<setw(8)<<m.A[i][j]<<" ";
         }
+        cout<<"   =   "<<m.b[i];
         cout<<endl;
     }
     cout<<endl;
@@ -30,8 +28,8 @@ bool is_cell_valid(int r, int c, int rmax, int cmax){
 }
 
 
-void pivot(matrix m, int r, int c){
-       //print_matrix(m);
+void pivot(problem m, int r, int c){
+       //print_problem(m);
        if (!is_cell_valid(r,c, m.rows, m.cols) || m.A[r][c] == 0)
            cout<<"Cella non valida per l'operazione di pivot";
        else{
@@ -45,6 +43,21 @@ void pivot(matrix m, int r, int c){
                   m.A[i][j] -= coeff * m.A[r][j];
            }
            cout<<"Operazione di pivot completata sulla cella ("<<r<<","<<c<<")\n";
-           print_matrix(m);
+           print_problem(m);
         }   
+}
+float solve(problem m){
+    //phase1()
+    int r,c;
+    r=m.rows;
+    c=m.cols;
+    float **A2;
+    float *b;
+    float *f;
+    f = new float[r+c];
+    b = m.b; 
+
+return 1;
+
+
 }

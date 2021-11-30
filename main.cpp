@@ -8,7 +8,7 @@ using namespace std;
 int main(int argv, char** argchar){
 
     if(argv == 2){
-        if(argchar[1][0]=='-' && argchar[1][1]){
+        if(argchar[1][0]=='-' && argchar[1][1]=='h'){
             cout<<"Dplex è una cagata che prova a fare l' algoritmo del simplesso o qualcosa del genere, se si usa in modalità commandline bisogna seguire i comandi del prompt, altrimenti se si specifica un file di input basta formularlo correttamente secondo una logica che non ho voglia di scrivere"<<endl;
             return 0;
         }
@@ -23,6 +23,8 @@ int main(int argv, char** argchar){
     //int n,m;
     char o = 'n';
     int r, c;
+
+    /*
     char *file = "input.txt";
     matrix m = char_to_float_matrix(file);
     while(flag){
@@ -36,15 +38,18 @@ int main(int argv, char** argchar){
         cin>>o;
         flag = o == 'y' || o == 'Y';
     }
-    /*
+    */
     while(flag){
         cout<<"inserisci il numero di equazioni: ";
-        cin >>m;
+        while(r<=0){
+        cin >>r;
+        }
         cout<<endl<<"inserisci il numero di variabili decisionali: ";
-        cin >>n;
-        cout<<endl<<"e' problema con "<<m<<" vincoli in "<<n<<" variabili decisionali, e' corretto?(y/n)";
-        cin>>c;
-        switch(c){
+        while(c<=0)
+        cin >>c;
+        cout<<endl<<"e' problema con "<<r<<" vincoli in "<<c<<" variabili decisionali, e' corretto?(y/n)";
+        cin>>o;
+        switch(o){
             case 'y':
                 flag=false;
             break;
@@ -52,6 +57,6 @@ int main(int argv, char** argchar){
             break;
         }
     }
-    */
+    
     return 0;
 }

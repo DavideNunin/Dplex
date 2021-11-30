@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Desktop/Dplex/header.h
+
+/home/pi/Desktop/Dplex/library.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+iomanip
+-
+header.h
+/home/pi/Desktop/Dplex/header.h
+
