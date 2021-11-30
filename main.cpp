@@ -22,7 +22,7 @@ int main(int argv, char** argchar){
     bool flag=true;
     //int n,m;
     char o = 'n';
-    int r, c;
+    int r = -1, c = -1;
 
     /*
     char *file = "input.txt";
@@ -56,6 +56,7 @@ int main(int argv, char** argchar){
             default:
             break;
         }
+	r = c = -1;
     }
     
     return 0;
