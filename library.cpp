@@ -61,3 +61,51 @@ return 1;
 
 
 }
+void get_b(float* b,int r){
+    cout<<"inserisci il vettore b:"<<endl;
+    bool flag=true;
+    while(flag){
+        flag=false;
+        for(int i=0;i<r;i++){
+            cin>>b[i];
+        }
+        for(int i=0;i<r;i++){
+            if(b[i]<0){
+                flag=true;
+                cout<<endl<<"a maledettooo inserisci un vettore b con componenti maggiori di 0"<<endl;
+            }
+        }
+    }
+}
+
+void get_f(float* f,int c){
+    cout<<"inserisci il vettore f:"<<endl;
+    bool flag=true;
+    while(flag){
+        flag=false;
+        for(int i=0;i<c;i++){
+            cin>>f[i];
+        }
+        for(int i=0;i<c;i++){
+            if(f[i]<0){
+                flag=true;
+                cout<<endl<<"a maledettooo inserisci un vettore f con componenti maggiori di 0"<<endl;
+            }
+        }
+    }
+}
+void get_A(float** A,int r,int c){
+    bool flag=true;
+    for(int i=0;i<r;i++){
+        A[i]= new float[c];
+    }
+    while(flag){
+        flag=false;
+        for(int i=0;i<r;i++){
+            cout<<"inserisci la riga "<<i<<" di A"<<endl;
+            for(int j=0;j<c;j++){
+                cin>>A[i][j];
+            }
+        }
+    }
+}
