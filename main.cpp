@@ -40,6 +40,7 @@ int main(int argv, char** argchar){
     }
     */
     while(flag){
+	r = c = -1;
         cout<<"inserisci il numero di equazioni: ";
         while(r<=0){
         cin >>r;
@@ -56,8 +57,16 @@ int main(int argv, char** argchar){
             default:
             break;
         }
-	r = c = -1;
     }
+    float **A;
+    float *b;
+    float *f;
+    f = new float[c];
+    b = new float[r];
+    A = new float*[r];
+    get_b(b,c);
+    get_f(f,r);
+    get_A(A,r,c);
     
     return 0;
 }

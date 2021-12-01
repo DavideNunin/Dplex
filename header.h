@@ -26,3 +26,6 @@ void print_problem(problem m);
 void pivot(problem m, pivot p);
 
 float solve(problem m);
+void get_b(float* b, int r);
+void get_f(float* f, int c);
+void get_A(float** A,int r,int c);
