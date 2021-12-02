@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vitoska/Desktop/Simplesso/DPLEX/header.h
+
+/home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp
+../header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/header.h
+

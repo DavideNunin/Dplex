@@ -6,7 +6,7 @@ using namespace std;
 #include "header.h"
 
 int main(int argv, char** argchar){
-
+	
     if(argv == 2){
         if(argchar[1][0]=='-' && argchar[1][1]=='h'){
             cout<<"Dplex è una cagata che prova a fare l' algoritmo del simplesso o qualcosa del genere, se si usa in modalità commandline bisogna seguire i comandi del prompt, altrimenti se si specifica un file di input basta formularlo correttamente secondo una logica che non ho voglia di scrivere"<<endl;
@@ -39,6 +39,7 @@ int main(int argv, char** argchar){
         flag = o == 'y' || o == 'Y';
     }
     */
+	
     while(flag){
 	r = c = -1;
         cout<<"inserisci il numero di equazioni: ";
@@ -67,6 +68,5 @@ int main(int argv, char** argchar){
     get_b(b,c);
     get_f(f,r);
     get_A(A,r,c);
-    
     return 0;
 }

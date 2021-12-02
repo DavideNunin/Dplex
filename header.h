@@ -17,15 +17,21 @@ struct tableau{
 struct pivot{
 	int r;
 	int c;
-}
+};
 
 int withparam(int argv, char** argchar);
 
 void print_problem(problem m);
+void print_tableau(tableau t);
 
-void pivot(problem m, pivot p);
+void do_pivot(tableau m, pivot p);
+tableau make_aux_prob(tableau t);
+
 
 float solve(problem m);
+
 void get_b(float* b, int r);
 void get_f(float* f, int c);
 void get_A(float** A,int r,int c);
+
+void test_phase_1();

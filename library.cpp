@@ -23,25 +23,37 @@ void print_problem(problem m){
     cout<<endl;
 }
 
+void print_tableau(tableau t){
+	cout<<"Tableau:\n";
+	cout<<t.rows<<" x "<<t.cols<<"\n";
+	for(int i=0; i<t.rows; i++){
+		for(int j=0;j<t.cols;j++)
+			cout<<setw(8)<<t.tab[i][j];
+		cout<<"\n";
+	}
+	cout<<"\n";
+}
+
+
 //controlla se una cella è valida per fare pivot
 bool is_cell_valid(pivot p, tableau m){
-    return p.r > 0 && p.c >= 0 && p.r < m.rows && p.c < m.cols-1 && m.A[r][c] != 0;
+    return p.r > 0 && p.c >= 0 && p.r < m.rows && p.c < m.cols-1 && m.tab[p.r][p.c] != 0;
 }
 
 //esegue il pivot su una cella del tableau
 
-void pivot(tableau m, pivot p){
+void do_pivot(tableau m, pivot p){
        if (!is_cell_valid(p,m) )
            cout<<"Cella non valida per l'operazione di pivot";
        else{
-	   float coeff = m.A[p.r][p.c];
+	   float coeff = m.tab[p.r][p.c];
            for(int i=0; i<m.cols; i++)
-                m.A[p.r][i] /=  coeff;
+                m.tab[p.r][i] /=  coeff;
 	   for(int i=0; i<m.rows; i++){
-	       float coeff = m.A[i][p.c];
+	       float coeff = m.tab[i][p.c];
                if(i == p.r) continue;
                for(int j=0; j<m.cols; j++)
-                  m.A[i][j] -= coeff * m.A[p.r][j];
+                  m.tab[i][j] -= coeff * m.tab[p.r][j];
 	 }
            cout<<"Operazione di pivot completata sulla cella ("<<p.r<<","<<p.c<<")\n";
         }   
@@ -49,7 +61,11 @@ void pivot(tableau m, pivot p){
 
 tableau prob_to_tab(problem p){
 
-	float M[p.rows+1][p.cols+1];
+	float **M;
+	M = new float *[p.rows+1];
+
+	for(int i=0; i<p.rows+1; i++)
+		M[i] = new float [p.cols+1];
 	
 	for(int i=0; i < p.cols; i++)
 		M[0][i] = p.f[i];

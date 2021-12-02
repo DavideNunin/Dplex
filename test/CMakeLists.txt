@@ -4,9 +4,9 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 project(sample)
 add_executable(
-    DVplex
-    main.cpp
-    library.cpp
-    withparam.cpp
-	phase1.cpp
+   	test1 
+    test1.cpp
+    ../library.cpp
+    ../withparam.cpp
+	../phase1.cpp
 	)
