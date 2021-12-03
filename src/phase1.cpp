@@ -146,9 +146,9 @@ tableau get_rid_by_alphas(tableau t){
 
 void delete_alphas(tableau t){
 	double ** new_tab;
-	new_rows = t.rows;
-	new_cols = t.cols - t.rows + 1;
-	new_tab = double*[new_rows];
+	int new_rows = t.rows;
+	int new_cols = t.cols - t.rows + 1;
+	new_tab =new double*[new_rows];
 	for(int i=0; i<new_rows; i++){
 		new_tab[i] = new double[new_cols];
 		for(int j=0; j<new_cols; j++)
@@ -160,7 +160,7 @@ void delete_alphas(tableau t){
 }
 
 void restore_fo(tableau t, problem p){
-	for(int i=0; i<t.cols-1, i++)
+	for(int i=0; i<t.cols-1; i++)
 			t.tab[0][i] = p.f[i];
 }
 
