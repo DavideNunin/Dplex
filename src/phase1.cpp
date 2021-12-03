@@ -63,6 +63,8 @@ tableau make_aux_prob(tableau t){
     return aux_prob;
 }
 
+//determina se una colonna è un versore
+
 int is_col_in_base(tableau t, int c){
 	
 	int row=0;
@@ -77,7 +79,7 @@ int is_col_in_base(tableau t, int c){
 		}
 	}
 
-	if(cont1==1 && cont0==t.rows-1) return row;
+	if(cont1==1 && cont0==t.rows-2) return row;
 	return 0;
 }
 
@@ -115,5 +117,34 @@ tableau get_rid_by_alphas(tableau t){
         cout<<inbase[i]<<" ";
     }
     t=zeroize(t);
-return t;    
+	return t;    
+}
+
+void delete_alphas(tableau t){
+	double ** new_tab;
+	new_rows = t.rows;
+	new_cols = t.cols - t.rows + 1;
+	new_tab = double*[new_rows];
+	for(int i=0; i<new_rows; i++){
+		new_tab[i] = new double[new_cols];
+		for(int j=0; j<new_cols; j++)
+			new_tab[i][j] = t.tab[i][j];
+	}
+	t.tab = new_tab;
+	t.rows = new_rows;
+	t.cols = new_cols;
+}
+
+void restore_fo(tableau t, problem p){
+	for(int i=0; i<t.cols-1, i++)
+			t.tab[0][i] = p.f[i];
+}
+
+void restore_canonic(tableau t){
+	for(int i=0; i<t.cols-1; i++){
+		if(int j = is_col_in_base(t,i)){
+			pivot p = {j,i};
+			bool tmp = do_pivot(t,p);
+		}
+	}
 }

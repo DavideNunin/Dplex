@@ -8,23 +8,6 @@
 
 /home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
 
-<<<<<<< HEAD
-/home/pi/Desktop/Dplex/src/phase1.cpp
-iostream
--
-=======
-/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp
-iostream
--
-stdio.h
--
-stdlib.h
--
-iomanip
--
-header.h
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
-
 /home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
 iostream
 -
@@ -35,20 +18,5 @@ stdlib.h
 iomanip
 -
 header.h
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
-
-/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp
->>>>>>> 7f14410ffa345cba39dcba627516e978894a8ffc
-stdio.h
--
-stdlib.h
--
-iomanip
--
-header.h
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
-
-/home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp
-../src/header.h
 /home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
 
