@@ -6,9 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Desktop/Dplex/src/header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
 
-/home/pi/Desktop/Dplex/src/withparam.cpp
+/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+iomanip
+-
+header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
+
+/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+iomanip
+-
+header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
+
+/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp
 stdio.h
 -
 stdlib.h
@@ -18,5 +42,9 @@ iostream
 fstream
 -
 header.h
-/home/pi/Desktop/Dplex/src/header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
+
+/home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp
+../src/header.h
+/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
 

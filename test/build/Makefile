@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Desktop/Dplex/test
+CMAKE_SOURCE_DIR = /home/vitoska/Desktop/Simplesso/DPLEX/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Desktop/Dplex/test/build
+CMAKE_BINARY_DIR = /home/vitoska/Desktop/Simplesso/DPLEX/test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/Dplex/test/build/CMakeFiles /home/pi/Desktop/Dplex/test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles /home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Desktop/Dplex/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,86 +123,86 @@ test1/fast:
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
 .PHONY : test1/fast
 
-home/pi/Desktop/Dplex/src/library.o: home/pi/Desktop/Dplex/src/library.cpp.o
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.o: home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o
 
-.PHONY : home/pi/Desktop/Dplex/src/library.o
-
-# target to build an object file
-home/pi/Desktop/Dplex/src/library.cpp.o:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o
-.PHONY : home/pi/Desktop/Dplex/src/library.cpp.o
-
-home/pi/Desktop/Dplex/src/library.i: home/pi/Desktop/Dplex/src/library.cpp.i
-
-.PHONY : home/pi/Desktop/Dplex/src/library.i
-
-# target to preprocess a source file
-home/pi/Desktop/Dplex/src/library.cpp.i:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.i
-.PHONY : home/pi/Desktop/Dplex/src/library.cpp.i
-
-home/pi/Desktop/Dplex/src/library.s: home/pi/Desktop/Dplex/src/library.cpp.s
-
-.PHONY : home/pi/Desktop/Dplex/src/library.s
-
-# target to generate assembly for a file
-home/pi/Desktop/Dplex/src/library.cpp.s:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.s
-.PHONY : home/pi/Desktop/Dplex/src/library.cpp.s
-
-home/pi/Desktop/Dplex/src/phase1.o: home/pi/Desktop/Dplex/src/phase1.cpp.o
-
-.PHONY : home/pi/Desktop/Dplex/src/phase1.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.o
 
 # target to build an object file
-home/pi/Desktop/Dplex/src/phase1.cpp.o:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o
-.PHONY : home/pi/Desktop/Dplex/src/phase1.cpp.o
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o
 
-home/pi/Desktop/Dplex/src/phase1.i: home/pi/Desktop/Dplex/src/phase1.cpp.i
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.i: home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i
 
-.PHONY : home/pi/Desktop/Dplex/src/phase1.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.i
 
 # target to preprocess a source file
-home/pi/Desktop/Dplex/src/phase1.cpp.i:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.i
-.PHONY : home/pi/Desktop/Dplex/src/phase1.cpp.i
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i
 
-home/pi/Desktop/Dplex/src/phase1.s: home/pi/Desktop/Dplex/src/phase1.cpp.s
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.s: home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s
 
-.PHONY : home/pi/Desktop/Dplex/src/phase1.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.s
 
 # target to generate assembly for a file
-home/pi/Desktop/Dplex/src/phase1.cpp.s:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.s
-.PHONY : home/pi/Desktop/Dplex/src/phase1.cpp.s
+home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s
 
-home/pi/Desktop/Dplex/src/withparam.o: home/pi/Desktop/Dplex/src/withparam.cpp.o
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.o: home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o
 
-.PHONY : home/pi/Desktop/Dplex/src/withparam.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.o
 
 # target to build an object file
-home/pi/Desktop/Dplex/src/withparam.cpp.o:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o
-.PHONY : home/pi/Desktop/Dplex/src/withparam.cpp.o
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o
 
-home/pi/Desktop/Dplex/src/withparam.i: home/pi/Desktop/Dplex/src/withparam.cpp.i
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.i: home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i
 
-.PHONY : home/pi/Desktop/Dplex/src/withparam.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.i
 
 # target to preprocess a source file
-home/pi/Desktop/Dplex/src/withparam.cpp.i:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.i
-.PHONY : home/pi/Desktop/Dplex/src/withparam.cpp.i
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i
 
-home/pi/Desktop/Dplex/src/withparam.s: home/pi/Desktop/Dplex/src/withparam.cpp.s
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.s: home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
 
-.PHONY : home/pi/Desktop/Dplex/src/withparam.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.s
 
 # target to generate assembly for a file
-home/pi/Desktop/Dplex/src/withparam.cpp.s:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.s
-.PHONY : home/pi/Desktop/Dplex/src/withparam.cpp.s
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
+
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.o: home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.o
+
+# target to build an object file
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o
+
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.i: home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.i
+
+# target to preprocess a source file
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i
+
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.s: home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.s
+
+# target to generate assembly for a file
+home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s
 
 test1.o: test1.cpp.o
 
@@ -238,17 +238,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test1"
 	@echo "... edit_cache"
-	@echo "... home/pi/Desktop/Dplex/src/library.o"
-	@echo "... home/pi/Desktop/Dplex/src/library.i"
-	@echo "... home/pi/Desktop/Dplex/src/library.s"
-	@echo "... home/pi/Desktop/Dplex/src/phase1.o"
-	@echo "... home/pi/Desktop/Dplex/src/phase1.i"
-	@echo "... home/pi/Desktop/Dplex/src/phase1.s"
-	@echo "... home/pi/Desktop/Dplex/src/withparam.o"
-	@echo "... home/pi/Desktop/Dplex/src/withparam.i"
-	@echo "... home/pi/Desktop/Dplex/src/withparam.s"
+	@echo "... test1"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/library.o"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/library.i"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/library.s"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.o"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.i"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.s"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.o"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.i"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.s"
 	@echo "... test1.o"
 	@echo "... test1.i"
 	@echo "... test1.s"

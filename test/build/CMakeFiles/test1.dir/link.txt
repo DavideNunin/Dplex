@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++14 -g  -rdynamic CMakeFiles/test1.dir/test1.cpp.o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o  -o test1 
+/usr/bin/c++   -std=c++14 -g  -rdynamic CMakeFiles/test1.dir/test1.cpp.o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o  -o test1 

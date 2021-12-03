@@ -62,6 +62,25 @@ tableau make_aux_prob(tableau t){
 	tableau aux_prob = {tab_aux, rows_aux, cols_aux};
     return aux_prob;
 }
+
+int is_col_in_base(tableau t, int c){
+	
+	int row=0;
+	int cont0=0;
+	int cont1=0;
+
+	for(int i=1; i<t.rows; i++){
+		if(t.tab[i][c] == 0) cont0++;
+		if(t.tab[i][c] == 1){
+			row = i;
+			cont1++;
+		}
+	}
+
+	if(cont1==1 && cont0==t.rows-1) return row;
+	return 0;
+}
+
 tableau get_rid_by_alphas(tableau t){
     int bias=t.cols-t.rows-1;
     int donecol[bias+1];
@@ -79,5 +98,5 @@ tableau get_rid_by_alphas(tableau t){
             }
         }
     }
-return t;    
+	return t;    
 }
