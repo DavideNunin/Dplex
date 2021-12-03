@@ -63,21 +63,38 @@ tableau make_aux_prob(tableau t){
     return aux_prob;
 }
 tableau get_rid_by_alphas(tableau t){
-    int bias=t.cols-t.rows-1;
+    bool inbase[t.rows];
+    for(int i=0;i<t.cols-1;i++)inbase[i]=false;
+    int bias=t.cols-t.rows-1;   //ultima colonna delle x
     int donecol[bias+1];
     bool donerow[t.rows];
     int nx=bias+1;
+    int versor=0;
     pivot p;
+    /*
     for(int i=0;i<nx;i++) donecol[i]=false;
     for(int i=0;i<t.rows;i++)donerow[i]=false;
     for(int i=0;i<nx;i++){
         for(int j=1;j<t.rows;j++){
             p={j,i};
             if(!donerow[j] && !donecol[i] && do_pivot(t,p)){
+                print_tableau(t);
+                cout<<endl;
                donerow[j]=true; 
                donecol[i]=true;
             }
         }
     }
+    */
+    for(int k=bias+1;k<t.cols-1;k++){
+        versor=is_col_in_base(t,k);
+        if(versor!=0){
+            inbase[versor]=true;
+        }
+    }
+    for(int i=0;i<t.rows;i++){
+        cout<<inbase[i]<<" ";
+    }
+    t=zeroize(t);
 return t;    
 }

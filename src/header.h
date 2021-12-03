@@ -37,3 +37,4 @@ void get_A(double** A,int r,int c);
 void test_phase_1();
 tableau canonize(tableau t);
 tableau get_rid_by_alphas(tableau t);
+tableau zeroize(tableau t);

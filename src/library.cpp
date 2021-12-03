@@ -22,6 +22,15 @@ void print_problem(problem m){
     }
     cout<<endl;
 }
+tableau zeroize(tableau t){
+    for(int i=0;i<t.rows;i++){
+        for(int j=0;j<t.cols;j++){
+            if(t.tab[i][j]<0.00000000000001 && t.tab[i][j]>-0.00000000000001)
+                t.tab[i][j]=0;
+        }
+    }
+    return t;
+}
 
 void print_tableau(tableau t){
 	cout<<"Tableau:\n";
