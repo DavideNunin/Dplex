@@ -6,7 +6,7 @@ project(sample)
 add_executable(
    	test1 
     test1.cpp
-    ../library.cpp
-    ../withparam.cpp
-	../phase1.cpp
+    ../src/library.cpp
+    ../src/withparam.cpp
+	../src/phase1.cpp
 	)

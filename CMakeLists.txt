@@ -5,8 +5,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 project(sample)
 add_executable(
     DVplex
-    main.cpp
-    library.cpp
-    withparam.cpp
-	phase1.cpp
+    src/main.cpp
+    src/library.cpp
+    src/withparam.cpp
+	src/phase1.cpp
 	)

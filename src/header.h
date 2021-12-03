@@ -1,15 +1,15 @@
 //aggiungere 1 o -1 se il problema è di massimo o di minimo
 struct problem{
-    float ** A;
+    double ** A;
     int rows;
     int cols;
-    float *b;
-    float *f;
+    double *b;
+    double *f;
 };
 
 //aggiungere 1 o -1 se il problema è di massimo o di minimo
 struct tableau{
-    float **tab;
+    double **tab;
     int rows;
     int cols;
 };
@@ -24,14 +24,16 @@ int withparam(int argv, char** argchar);
 void print_problem(problem m);
 void print_tableau(tableau t);
 
-void do_pivot(tableau m, pivot p);
+bool do_pivot(tableau m, pivot p);
 tableau make_aux_prob(tableau t);
 
 
-float solve(problem m);
+double solve(problem m);
 
-void get_b(float* b, int r);
-void get_f(float* f, int c);
-void get_A(float** A,int r,int c);
+void get_b(double* b, int r);
+void get_f(double* f, int c);
+void get_A(double** A,int r,int c);
 
 void test_phase_1();
+tableau canonize(tableau t);
+tableau get_rid_by_alphas(tableau t);

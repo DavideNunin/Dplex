@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/vitoska/Desktop/Simplesso/DPLEX/header.h
+/home/pi/Desktop/Dplex/src/header.h
 
-/home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp
-../header.h
-/home/vitoska/Desktop/Simplesso/DPLEX/header.h
+/home/pi/Desktop/Dplex/src/withparam.cpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+fstream
+-
+header.h
+/home/pi/Desktop/Dplex/src/header.h
 

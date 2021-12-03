@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vitoska/Desktop/Simplesso/DPLEX/library.cpp" "/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/library.cpp.o"
-  "/home/vitoska/Desktop/Simplesso/DPLEX/phase1.cpp" "/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/phase1.cpp.o"
-  "/home/vitoska/Desktop/Simplesso/DPLEX/withparam.cpp" "/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/withparam.cpp.o"
-  "/home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp" "/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/test1.dir/test1.cpp.o"
+  "/home/pi/Desktop/Dplex/src/library.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o"
+  "/home/pi/Desktop/Dplex/src/phase1.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o"
+  "/home/pi/Desktop/Dplex/src/withparam.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o"
+  "/home/pi/Desktop/Dplex/test/test1.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/test1.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

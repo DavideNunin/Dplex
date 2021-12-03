@@ -17,10 +17,12 @@ bool is_prob_comp(tableau t){
 
 //mette il tableau in forma canonica
 
-tableau canonize(tableau t, int bias){
+tableau canonize(tableau t){
+    int bias=t.cols-t.rows-1;
+    bool flag;
 	for(int i=1; i<t.rows; i++){
 		pivot p = {i,i+bias};
-		do_pivot(t,p);
+		flag=do_pivot(t,p);
 	}
 	return t;
 }
@@ -32,12 +34,12 @@ tableau make_aux_prob(tableau t){
 	int rows_aux = t.rows;
 	int cols_aux = t.cols + t.rows-1;
 	
-	float **tab_aux;
+	double **tab_aux;
 	
-	tab_aux = new float*[rows_aux];
+	tab_aux = new double*[rows_aux];
 
 	for(int i=0; i<rows_aux; i++)
-			tab_aux[i] = new float[cols_aux];
+			tab_aux[i] = new double[cols_aux];
 
 	for(int i=0; i < t.cols - 1; i++)
 		tab_aux[0][i] = 0;
@@ -55,9 +57,27 @@ tableau make_aux_prob(tableau t){
 		for(;j<t.cols-1; j++)
 			tab_aux[i][j] = t.tab[i][j];
 		for(;j<cols_aux-1;j++)
-			tab_aux[i][j] = float( (i + t.cols -2) == j );
+			tab_aux[i][j] = double( (i + t.cols -2) == j );
 	}
 	tableau aux_prob = {tab_aux, rows_aux, cols_aux};
-	print_tableau(aux_prob);
-	return canonize(aux_prob, t.cols-2);
+    return aux_prob;
+}
+tableau get_rid_by_alphas(tableau t){
+    int bias=t.cols-t.rows-1;
+    int donecol[bias+1];
+    bool donerow[t.rows];
+    int nx=bias+1;
+    pivot p;
+    for(int i=0;i<nx;i++) donecol[i]=false;
+    for(int i=0;i<t.rows;i++)donerow[i]=false;
+    for(int i=0;i<nx;i++){
+        for(int j=1;j<t.rows;j++){
+            p={j,i};
+            if(!donerow[j] && !donecol[i] && do_pivot(t,p)){
+               donerow[j]=true; 
+               donecol[i]=true;
+            }
+        }
+    }
+return t;    
 }

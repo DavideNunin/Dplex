@@ -10,12 +10,12 @@ void print_problem(problem m){
     cout<<"Matrice\n";
     cout<<"z = ";
     for(int i=0;i<m.cols;i++){
-        cout<<setw(8)<<m.f[i]<<" ";
+        cout<<setw(12)<<m.f[i]<<" ";
     }
     cout<<endl;
     for(int i=0;i<m.rows;i++){
         for(int j=0;j<m.cols;j++){
-            cout<<setw(8)<<m.A[i][j]<<" ";
+            cout<<setw(12)<<m.A[i][j]<<" ";
         }
         cout<<"   =   "<<m.b[i];
         cout<<endl;
@@ -28,7 +28,7 @@ void print_tableau(tableau t){
 	cout<<t.rows<<" x "<<t.cols<<"\n";
 	for(int i=0; i<t.rows; i++){
 		for(int j=0;j<t.cols;j++)
-			cout<<setw(8)<<t.tab[i][j];
+			cout<<setw(12)<<t.tab[i][j];
 		cout<<"\n";
 	}
 	cout<<"\n";
@@ -42,30 +42,33 @@ bool is_cell_valid(pivot p, tableau m){
 
 //esegue il pivot su una cella del tableau
 
-void do_pivot(tableau m, pivot p){
-       if (!is_cell_valid(p,m) )
-           cout<<"Cella non valida per l'operazione di pivot";
+bool do_pivot(tableau m, pivot p){
+       if (!is_cell_valid(p,m) ){
+           cout<<"Cella non valida per l'operazione di pivot "<<p.r<<" "<<p.c<<endl;
+           return false;
+       }
        else{
-	   float coeff = m.tab[p.r][p.c];
+	   double coeff = m.tab[p.r][p.c];
            for(int i=0; i<m.cols; i++)
                 m.tab[p.r][i] /=  coeff;
 	   for(int i=0; i<m.rows; i++){
-	       float coeff = m.tab[i][p.c];
+	       double coeff = m.tab[i][p.c];
                if(i == p.r) continue;
                for(int j=0; j<m.cols; j++)
                   m.tab[i][j] -= coeff * m.tab[p.r][j];
 	 }
            cout<<"Operazione di pivot completata sulla cella ("<<p.r<<","<<p.c<<")\n";
+           return true;
         }   
 }
 
 tableau prob_to_tab(problem p){
 
-	float **M;
-	M = new float *[p.rows+1];
+	double **M;
+	M = new double *[p.rows+1];
 
 	for(int i=0; i<p.rows+1; i++)
-		M[i] = new float [p.cols+1];
+		M[i] = new double [p.cols+1];
 	
 	for(int i=0; i < p.cols; i++)
 		M[0][i] = p.f[i];
@@ -88,9 +91,9 @@ tableau prob_to_tab(problem p){
 //non è detto che serva
 problem tab_to_prob(tableau t){
 	
-	float A[t.rows-1][t.cols-1];
-	float b[t.rows-1];
-	float f[t.cols-1];
+	double A[t.rows-1][t.cols-1];
+	double b[t.rows-1];
+	double f[t.cols-1];
 	
 	for(int i=0; i < t.cols-1; i++)
 		f[i] = t.tab[0][i];
@@ -110,19 +113,19 @@ problem tab_to_prob(tableau t){
 }
 */
 
-float solve(problem m){
+double solve(problem m){
     //phase1()
     int r,c;
     r=m.rows;
     c=m.cols;
-    float **A2;
-    float *b;
-    float *f;
-    f = new float[r+c];
+    double **A2;
+    double *b;
+    double *f;
+    f = new double[r+c];
     b = m.b;
     return 1;
 }
-void get_b(float* b,int r){
+void get_b(double* b,int r){
     cout<<"inserisci il vettore b:"<<endl;
     bool flag=true;
     while(flag){
@@ -139,7 +142,7 @@ void get_b(float* b,int r){
     }
 }
 
-void get_f(float* f,int c){
+void get_f(double* f,int c){
     cout<<"inserisci il vettore f:"<<endl;
     bool flag=true;
     while(flag){
@@ -155,10 +158,10 @@ void get_f(float* f,int c){
         }
     }
 }
-void get_A(float** A,int r,int c){
+void get_A(double** A,int r,int c){
     bool flag=true;
     for(int i=0;i<r;i++){
-        A[i]= new float[c];
+        A[i]= new double[c];
     }
     while(flag){
         flag=false;

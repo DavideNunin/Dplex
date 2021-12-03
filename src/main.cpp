@@ -26,7 +26,7 @@ int main(int argv, char** argchar){
 
     /*
     char *file = "input.txt";
-    matrix m = char_to_float_matrix(file);
+    matrix m = char_to_double_matrix(file);
     while(flag){
 	print_matrix(m);
         cout<<"inserisci la riga: ";
@@ -59,12 +59,12 @@ int main(int argv, char** argchar){
             break;
         }
     }
-    float **A;
-    float *b;
-    float *f;
-    f = new float[c];
-    b = new float[r];
-    A = new float*[r];
+    double **A;
+    double *b;
+    double *f;
+    f = new double[c];
+    b = new double[r];
+    A = new double*[r];
     get_b(b,c);
     get_f(f,r);
     get_A(A,r,c);
