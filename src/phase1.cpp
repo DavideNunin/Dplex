@@ -77,43 +77,67 @@ int is_col_in_base(tableau t, int c){
 		}
 	}
 
-	if(cont1==1 && cont0==t.rows-1) return row;
+	if(cont1==1 && cont0==t.rows-2) return row;
 	return 0;
+}
+bool alpha_in_base(tableau t, bool inbase[]){
+    for(int i=0;i<t.cols-1;i++)inbase[i]=false;
+    int bias = t.cols-t.rows-1;
+    int versor;
+    bool flag= false;
+    for(int i=bias+1;i<t.cols-1;i++){
+        versor=is_col_in_base(t,i);
+        if(versor!=0){
+            inbase[versor]=true;
+            flag=true;
+        }
+    }
+    return flag;
 }
 
 tableau get_rid_by_alphas(tableau t){
-    bool inbase[t.rows];
-    for(int i=0;i<t.cols-1;i++)inbase[i]=false;
     int bias=t.cols-t.rows-1;   //ultima colonna delle x
     int donecol[bias+1];
     bool donerow[t.rows];
     int nx=bias+1;
     int versor=0;
     pivot p;
-    /*
     for(int i=0;i<nx;i++) donecol[i]=false;
-    for(int i=0;i<t.rows;i++)donerow[i]=false;
-    for(int i=0;i<nx;i++){
-        for(int j=1;j<t.rows;j++){
-            p={j,i};
-            if(!donerow[j] && !donecol[i] && do_pivot(t,p)){
-                print_tableau(t);
-                cout<<endl;
-               donerow[j]=true; 
-               donecol[i]=true;
-            }
-        }
-    }
-    */
+    bool inbase[t.rows];
+    while(alpha_in_base(t,inbase)){
+
+
     for(int k=bias+1;k<t.cols-1;k++){
         versor=is_col_in_base(t,k);
         if(versor!=0){
             inbase[versor]=true;
         }
     }
+
     for(int i=0;i<t.rows;i++){
         cout<<inbase[i]<<" ";
     }
+
+
+        for(int i=0;i<nx;i++){
+            for(int j=1;j<t.rows;j++){
+                p={j,i};
+                if(inbase[j] && !donecol[i] && do_pivot(t,p)){
+                    print_tableau(t);
+                    cout<<endl;
+                    donecol[i]=true;
+                   inbase[j]=false; 
+                   break;
+                }
+            }
+        }
+    }
+    /*
+    p={3,5};
+    bool cazzo;
+    cazzo=do_pivot(t,p);
+    */
+    cout<<endl;
     t=zeroize(t);
-return t;    
+    return t;    
 }
