@@ -8,11 +8,7 @@
 
 /home/pi/Desktop/Dplex/src/header.h
 
-<<<<<<< HEAD
 /home/pi/Desktop/Dplex/src/phase1.cpp
-=======
-/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
->>>>>>> 87dbacde0a07b74496eb8ba8604fa06fef863e27
 iostream
 -
 stdio.h
@@ -22,9 +18,5 @@ stdlib.h
 iomanip
 -
 header.h
-<<<<<<< HEAD
 /home/pi/Desktop/Dplex/src/header.h
-=======
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
->>>>>>> 87dbacde0a07b74496eb8ba8604fa06fef863e27
 

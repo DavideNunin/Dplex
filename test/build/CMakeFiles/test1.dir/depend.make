@@ -7,6 +7,9 @@ CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o: /home/pi/Desktop/D
 CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o: /home/pi/Desktop/Dplex/src/header.h
 CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o: /home/pi/Desktop/Dplex/src/phase1.cpp
 
+CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o: /home/pi/Desktop/Dplex/src/header.h
+CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o: /home/pi/Desktop/Dplex/src/solve.cpp
+
 CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o: /home/pi/Desktop/Dplex/src/header.h
 CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o: /home/pi/Desktop/Dplex/src/withparam.cpp
 

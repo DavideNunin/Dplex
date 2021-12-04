@@ -65,7 +65,7 @@ tableau make_aux_prob(tableau t){
 
 //determina se una colonna è un versore
 
-int is_col_in_base(tableau t, int c){
+int is_col_in_base(tableau t, int c){       //restituisce o se la colonna c non è in base, altrimenti la posizione del versore nella base
 	
 	int row=0;
 	int cont0=0;
@@ -84,14 +84,14 @@ int is_col_in_base(tableau t, int c){
 }
 bool alpha_in_base(tableau t, bool inbase[]){
     for(int i=0;i<t.cols-1;i++)inbase[i]=false;
-    int bias = t.cols-t.rows-1;
+    int bias = t.cols-t.rows-1;     //ultima colonna delle X
     int versor;
     bool flag= false;
-    for(int i=bias+1;i<t.cols-1;i++){
-        versor=is_col_in_base(t,i);
-        if(versor!=0){
+    for(int i=bias+1;i<t.cols-1;i++){   //per tutte le colonne alfa
+        versor=is_col_in_base(t,i);     //se la colonna i è versore
+        if(versor!=0){              //si segna che la colonna i è in base
             inbase[versor]=true;
-            flag=true;
+            flag=true;              //e quindi c' è almeno una alfa in base
         }
     }
     return flag;
@@ -99,27 +99,26 @@ bool alpha_in_base(tableau t, bool inbase[]){
 
 tableau get_rid_by_alphas(tableau t){
     int bias=t.cols-t.rows-1;   //ultima colonna delle x
-    int donecol[bias+1];
-    bool donerow[t.rows];
-    int nx=bias+1;
+    int donecol[bias+1];        //colonne su cui è stato fatto il pivot
+    bool donerow[t.rows];       //righe su cui e stato fatto il pivot
+    int nx=bias+1;              //numero di colonne delle variabili X
     int versor=0;
-    pivot p;
+    pivot p;                    //cella su cui fare il pivot
     for(int i=0;i<nx;i++) donecol[i]=false;
-    bool inbase[t.rows];
-    while(alpha_in_base(t,inbase)){
+    bool inbase[t.rows];        //vettore delle variabili attualmente in base
+    while(alpha_in_base(t,inbase)){     //fin quando c' e almeno una alfa in base
 
 
-    for(int k=bias+1;k<t.cols-1;k++){
+    for(int k=bias+1;k<t.cols-1;k++){       //
         versor=is_col_in_base(t,k);
         if(versor!=0){
             inbase[versor]=true;
         }
     }
 
-    for(int i=0;i<t.rows;i++){
-        cout<<inbase[i]<<" ";
-    }
-
+    for(int i=0;i<t.rows;i++)  cout<<inbase[i]<<" ";
+    cout<<endl;
+    for(int i=0;i<=bias;i++) cout<<donecol[i]<<" ";
 
         for(int i=0;i<nx;i++){
             for(int j=1;j<t.rows;j++){

@@ -177,6 +177,33 @@ home/pi/Desktop/Dplex/src/phase1.cpp.s:
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.s
 .PHONY : home/pi/Desktop/Dplex/src/phase1.cpp.s
 
+home/pi/Desktop/Dplex/src/solve.o: home/pi/Desktop/Dplex/src/solve.cpp.o
+
+.PHONY : home/pi/Desktop/Dplex/src/solve.o
+
+# target to build an object file
+home/pi/Desktop/Dplex/src/solve.cpp.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o
+.PHONY : home/pi/Desktop/Dplex/src/solve.cpp.o
+
+home/pi/Desktop/Dplex/src/solve.i: home/pi/Desktop/Dplex/src/solve.cpp.i
+
+.PHONY : home/pi/Desktop/Dplex/src/solve.i
+
+# target to preprocess a source file
+home/pi/Desktop/Dplex/src/solve.cpp.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.i
+.PHONY : home/pi/Desktop/Dplex/src/solve.cpp.i
+
+home/pi/Desktop/Dplex/src/solve.s: home/pi/Desktop/Dplex/src/solve.cpp.s
+
+.PHONY : home/pi/Desktop/Dplex/src/solve.s
+
+# target to generate assembly for a file
+home/pi/Desktop/Dplex/src/solve.cpp.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.s
+.PHONY : home/pi/Desktop/Dplex/src/solve.cpp.s
+
 home/pi/Desktop/Dplex/src/withparam.o: home/pi/Desktop/Dplex/src/withparam.cpp.o
 
 .PHONY : home/pi/Desktop/Dplex/src/withparam.o
@@ -246,6 +273,9 @@ help:
 	@echo "... home/pi/Desktop/Dplex/src/phase1.o"
 	@echo "... home/pi/Desktop/Dplex/src/phase1.i"
 	@echo "... home/pi/Desktop/Dplex/src/phase1.s"
+	@echo "... home/pi/Desktop/Dplex/src/solve.o"
+	@echo "... home/pi/Desktop/Dplex/src/solve.i"
+	@echo "... home/pi/Desktop/Dplex/src/solve.s"
 	@echo "... home/pi/Desktop/Dplex/src/withparam.o"
 	@echo "... home/pi/Desktop/Dplex/src/withparam.i"
 	@echo "... home/pi/Desktop/Dplex/src/withparam.s"

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/Desktop/Dplex/src/library.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o"
   "/home/pi/Desktop/Dplex/src/phase1.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o"
+  "/home/pi/Desktop/Dplex/src/solve.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o"
   "/home/pi/Desktop/Dplex/src/withparam.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o"
   "/home/pi/Desktop/Dplex/test/test1.cpp" "/home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/test1.cpp.o"
   )
