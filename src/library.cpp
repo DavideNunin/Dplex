@@ -83,7 +83,7 @@ tableau prob_to_tab(problem p){
 		M[0][i] = p.f[i];
 	
 	for(int i=1; i <= p.rows; i++)
-		M[i][p.cols] = p.b[i];
+		M[i][p.cols] = p.b[i-1];
 
 	for(int i=1; i <= p.rows; i++){
 		for(int j=0; j < p.cols; j++)
