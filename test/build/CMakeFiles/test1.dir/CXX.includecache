@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
+/home/pi/Desktop/Dplex/src/header.h
 
-/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
+/home/pi/Desktop/Dplex/src/phase1.cpp
 iostream
 -
 stdio.h
@@ -18,5 +18,5 @@ stdlib.h
 iomanip
 -
 header.h
-/home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
+/home/pi/Desktop/Dplex/src/header.h
 

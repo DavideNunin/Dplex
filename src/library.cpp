@@ -122,18 +122,6 @@ problem tab_to_prob(tableau t){
 }
 */
 
-double solve(problem m){
-    //phase1()
-    int r,c;
-    r=m.rows;
-    c=m.cols;
-    double **A2;
-    double *b;
-    double *f;
-    f = new double[r+c];
-    b = m.b;
-    return 1;
-}
 void get_b(double* b,int r){
     cout<<"inserisci il vettore b:"<<endl;
     bool flag=true;

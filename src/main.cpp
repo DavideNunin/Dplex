@@ -65,8 +65,10 @@ int main(int argv, char** argchar){
     f = new double[c];
     b = new double[r];
     A = new double*[r];
-    get_b(b,c);
-    get_f(f,r);
+    get_b(b,r);
+    get_f(f,c);
     get_A(A,r,c);
+    problem p={1,A,r,c,b,f};
+    solve(p);
     return 0;
 }

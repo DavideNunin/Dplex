@@ -65,7 +65,7 @@ tableau make_aux_prob(tableau t){
 
 //determina se una colonna è un versore
 
-int is_col_in_base(tableau t, int c){
+int is_col_in_base(tableau t, int c){       //restituisce o se la colonna c non è in base, altrimenti la posizione del versore nella base
 	
 	int row=0;
 	int cont0=0;
@@ -82,49 +82,72 @@ int is_col_in_base(tableau t, int c){
 	if(cont1==1 && cont0==t.rows-2) return row;
 	return 0;
 }
-
-tableau get_rid_by_alphas(tableau t){
-    bool inbase[t.rows];
+bool alpha_in_base(tableau t, bool inbase[]){
     for(int i=0;i<t.cols-1;i++)inbase[i]=false;
-    int bias=t.cols-t.rows-1;   //ultima colonna delle x
-    int donecol[bias+1];
-    bool donerow[t.rows];
-    int nx=bias+1;
-    int versor=0;
-    pivot p;
-    /*
-    for(int i=0;i<nx;i++) donecol[i]=false;
-    for(int i=0;i<t.rows;i++)donerow[i]=false;
-    for(int i=0;i<nx;i++){
-        for(int j=1;j<t.rows;j++){
-            p={j,i};
-            if(!donerow[j] && !donecol[i] && do_pivot(t,p)){
-                print_tableau(t);
-                cout<<endl;
-               donerow[j]=true; 
-               donecol[i]=true;
-            }
+    int bias = t.cols-t.rows-1;     //ultima colonna delle X
+    int versor;
+    bool flag= false;
+    for(int i=bias+1;i<t.cols-1;i++){   //per tutte le colonne alfa
+        versor=is_col_in_base(t,i);     //se la colonna i è versore
+        if(versor!=0){              //si segna che la colonna i è in base
+            inbase[versor]=true;
+            flag=true;              //e quindi c' è almeno una alfa in base
         }
     }
-    */
-    for(int k=bias+1;k<t.cols-1;k++){
+    return flag;
+}
+
+tableau get_rid_by_alphas(tableau t){
+    int bias=t.cols-t.rows-1;   //ultima colonna delle x
+    int donecol[bias+1];        //colonne su cui è stato fatto il pivot
+    bool donerow[t.rows];       //righe su cui e stato fatto il pivot
+    int nx=bias+1;              //numero di colonne delle variabili X
+    int versor=0;
+    pivot p;                    //cella su cui fare il pivot
+    for(int i=0;i<nx;i++) donecol[i]=false;
+    bool inbase[t.rows];        //vettore delle variabili attualmente in base
+    while(alpha_in_base(t,inbase)){     //fin quando c' e almeno una alfa in base
+
+
+    for(int k=bias+1;k<t.cols-1;k++){       //
         versor=is_col_in_base(t,k);
         if(versor!=0){
             inbase[versor]=true;
         }
     }
-    for(int i=0;i<t.rows;i++){
-        cout<<inbase[i]<<" ";
+
+    for(int i=0;i<t.rows;i++)  cout<<inbase[i]<<" ";
+    cout<<endl;
+    for(int i=0;i<=bias;i++) cout<<donecol[i]<<" ";
+
+        for(int i=0;i<nx;i++){
+            for(int j=1;j<t.rows;j++){
+                p={j,i};
+                if(inbase[j] && !donecol[i] && do_pivot(t,p)){
+                    print_tableau(t);
+                    cout<<endl;
+                    donecol[i]=true;
+                   inbase[j]=false; 
+                   break;
+                }
+            }
+        }
     }
+    /*
+    p={3,5};
+    bool cazzo;
+    cazzo=do_pivot(t,p);
+    */
+    cout<<endl;
     t=zeroize(t);
 	return t;    
 }
 
 void delete_alphas(tableau t){
 	double ** new_tab;
-	new_rows = t.rows;
-	new_cols = t.cols - t.rows + 1;
-	new_tab = double*[new_rows];
+	int new_rows = t.rows;
+	int new_cols = t.cols - t.rows + 1;
+	new_tab =new double*[new_rows];
 	for(int i=0; i<new_rows; i++){
 		new_tab[i] = new double[new_cols];
 		for(int j=0; j<new_cols; j++)
@@ -136,7 +159,7 @@ void delete_alphas(tableau t){
 }
 
 void restore_fo(tableau t, problem p){
-	for(int i=0; i<t.cols-1, i++)
+	for(int i=0; i<t.cols-1; i++)
 			t.tab[0][i] = p.f[i];
 }
 

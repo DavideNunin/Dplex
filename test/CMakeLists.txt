@@ -9,4 +9,5 @@ add_executable(
     ../src/library.cpp
     ../src/withparam.cpp
 	../src/phase1.cpp
+    ../src/solve.cpp
 	)
