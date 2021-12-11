@@ -1,19 +1,41 @@
 #include "../src/header.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+fstream file;
+
 void test_phase_1(){
-	double A[5][7] = {{ 1, 3, 0, 0, 0, 0, 0},
-				  { 6,10, 1, 0, 0, 0, 30},
-				  { 3, 2, 0,-1, 0, 0, 6},
-				  {-1, 2, 0, 0, 1, 0, 1},
-				  { 0, 1, 0, 0, 0,-1, 0.5}};
-	double **tab;
-	tab = new double*[5];
-	
-	for(int i=0; i<5; i++){
-		tab[i] = new double[7];
-		for(int j=0;j<7;j++)
-			tab[i][j] = A[i][j];
-	}
-	tableau t = {tab, 5, 7};
+	file.open("test.txt",ios::in);
+    int c,r;
+    file>>r;
+    file>>c;
+
+    double **A;
+    double *b;
+    double *f;
+    
+	f = new double[c];
+    b = new double[r];
+    A = new double*[r];
+    
+	for(int i=0;i<c;i++){
+        file>>f[i];
+    }
+    
+	for(int i=0;i<r;i++){
+        A[i]=new double[c];
+        for(int j=0;j<c;j++){
+            file>>A[i][j];
+        }
+        file>>b[i];
+    }
+    
+	problem p = {1,A, r, c, b, f};
+	print_problem(p);
+	tableau t = prob_to_tab(p);
 	print_tableau(t);
     t=make_aux_prob(t);
     print_tableau(t);

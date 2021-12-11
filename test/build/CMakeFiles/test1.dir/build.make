@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/Desktop/Dplex/test
+CMAKE_SOURCE_DIR = /home/vitoska/Desktop/Simplesso/DPLEX/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/Desktop/Dplex/test/build
+CMAKE_BINARY_DIR = /home/vitoska/Desktop/Simplesso/DPLEX/test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test1.dir/depend.make
@@ -59,88 +59,88 @@ include CMakeFiles/test1.dir/flags.make
 
 CMakeFiles/test1.dir/test1.cpp.o: CMakeFiles/test1.dir/flags.make
 CMakeFiles/test1.dir/test1.cpp.o: ../test1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test1.dir/test1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/test1.cpp.o -c /home/pi/Desktop/Dplex/test/test1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test1.dir/test1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/test1.cpp.o -c /home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp
 
 CMakeFiles/test1.dir/test1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/test1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/Dplex/test/test1.cpp > CMakeFiles/test1.dir/test1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp > CMakeFiles/test1.dir/test1.cpp.i
 
 CMakeFiles/test1.dir/test1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/test1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/Dplex/test/test1.cpp -o CMakeFiles/test1.dir/test1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitoska/Desktop/Simplesso/DPLEX/test/test1.cpp -o CMakeFiles/test1.dir/test1.cpp.s
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o: CMakeFiles/test1.dir/flags.make
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o: /home/pi/Desktop/Dplex/src/library.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o -c /home/pi/Desktop/Dplex/src/library.cpp
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o: CMakeFiles/test1.dir/flags.make
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o: /home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o -c /home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/Dplex/src/library.cpp > CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.i
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp > CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.i
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/Dplex/src/library.cpp -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.s
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.s
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o: CMakeFiles/test1.dir/flags.make
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o: /home/pi/Desktop/Dplex/src/withparam.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o -c /home/pi/Desktop/Dplex/src/withparam.cpp
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o: CMakeFiles/test1.dir/flags.make
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o: /home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o -c /home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/Dplex/src/withparam.cpp > CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.i
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp > CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.i
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/Dplex/src/withparam.cpp -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.s
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.s
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o: CMakeFiles/test1.dir/flags.make
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o: /home/pi/Desktop/Dplex/src/phase1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o -c /home/pi/Desktop/Dplex/src/phase1.cpp
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o: CMakeFiles/test1.dir/flags.make
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o: /home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o -c /home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/Dplex/src/phase1.cpp > CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.i
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp > CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.i
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/Dplex/src/phase1.cpp -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.s
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o: CMakeFiles/test1.dir/flags.make
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o: /home/pi/Desktop/Dplex/src/solve.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o -c /home/pi/Desktop/Dplex/src/solve.cpp
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o: CMakeFiles/test1.dir/flags.make
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o: /home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o -c /home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Desktop/Dplex/src/solve.cpp > CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.i
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp > CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.i
 
-CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Desktop/Dplex/src/solve.cpp -o CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.s
+CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp -o CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.s
 
 # Object files for target test1
 test1_OBJECTS = \
 "CMakeFiles/test1.dir/test1.cpp.o" \
-"CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o" \
-"CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o" \
-"CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o" \
-"CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o"
+"CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o" \
+"CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o" \
+"CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o" \
+"CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o"
 
 # External object files for target test1
 test1_EXTERNAL_OBJECTS =
 
 test1: CMakeFiles/test1.dir/test1.cpp.o
-test1: CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/library.cpp.o
-test1: CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/withparam.cpp.o
-test1: CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/phase1.cpp.o
-test1: CMakeFiles/test1.dir/home/pi/Desktop/Dplex/src/solve.cpp.o
+test1: CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/library.cpp.o
+test1: CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/withparam.cpp.o
+test1: CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.o
+test1: CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o
 test1: CMakeFiles/test1.dir/build.make
 test1: CMakeFiles/test1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Desktop/Dplex/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable test1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable test1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/test1.dir/clean:
 .PHONY : CMakeFiles/test1.dir/clean
 
 CMakeFiles/test1.dir/depend:
-	cd /home/pi/Desktop/Dplex/test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/Desktop/Dplex/test /home/pi/Desktop/Dplex/test /home/pi/Desktop/Dplex/test/build /home/pi/Desktop/Dplex/test/build /home/pi/Desktop/Dplex/test/build/CMakeFiles/test1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vitoska/Desktop/Simplesso/DPLEX/test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vitoska/Desktop/Simplesso/DPLEX/test /home/vitoska/Desktop/Simplesso/DPLEX/test /home/vitoska/Desktop/Simplesso/DPLEX/test/build /home/vitoska/Desktop/Simplesso/DPLEX/test/build /home/vitoska/Desktop/Simplesso/DPLEX/test/build/CMakeFiles/test1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test1.dir/depend
 
