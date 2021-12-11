@@ -5,14 +5,15 @@
 #include<fstream>
 
 using namespace std;
-fstream file;
 
 void test_phase_1(){
-	file.open("test.txt",ios::in);
-    int c,r;
-    file>>r;
-    file>>c;
-
+	fstream in;
+	in.open("../test1.txt",ios::in);
+    
+	int r,c;
+    in>>r;
+    in>>c;
+	
     double **A;
     double *b;
     double *f;
@@ -21,28 +22,47 @@ void test_phase_1(){
     b = new double[r];
     A = new double*[r];
     
-	for(int i=0;i<c;i++){
-        file>>f[i];
-    }
+	for(int i=0;i<c;i++)
+        in>>f[i];
     
 	for(int i=0;i<r;i++){
         A[i]=new double[c];
-        for(int j=0;j<c;j++){
-            file>>A[i][j];
-        }
-        file>>b[i];
+        for(int j=0;j<c;j++)
+            in>>A[i][j];
+        in>>b[i];
     }
     
+	in.close();
+
 	problem p = {1,A, r, c, b, f};
 	print_problem(p);
 	tableau t = prob_to_tab(p);
 	print_tableau(t);
-    t=make_aux_prob(t);
+    
+	cout<<"Problema ausiliario\n";
+	t=make_aux_prob(t);
     print_tableau(t);
-    t=canonize(t);
+
+	cout<<"Problema ausiliario in forma canonica\n";
+    canonize(t);
     print_tableau(t);
-    t=get_rid_by_alphas(t);
+	
+	cout<<"Problema ausiliario con uscita di variabili artificiali\n";
+    get_rid_by_alphas(t);
 	print_tableau(t);
+	
+	cout<<"Problema senza variabili artificiali\n";
+	t = delete_alphas(t);
+	print_tableau(t);
+	
+	cout<<"Problema con funzione obiettivo ripristinata\n";
+	restore_fo(t,p);
+	print_tableau(t);
+
+	cout<<"Problema originale in forma canonica\n";
+	restore_canonic(t);
+	print_tableau(t);
+
 
 }
 

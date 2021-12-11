@@ -4,13 +4,14 @@
 #include<iomanip>
 using namespace std;
 #include"header.h"
+
 void solve(problem p){
-tableau t= prob_to_tab(p);
-print_tableau(t);
-t=make_aux_prob(t);
-print_tableau(t);
-t=canonize(t);
-print_tableau(t);
-t=get_rid_by_alphas(t);
-print_tableau(t);
+	tableau t1 = prob_to_tab(p);
+	print_tableau(t1);
+	tableau t2 = make_aux_prob(t1);
+	print_tableau(t2);
+	canonize(t2);
+	print_tableau(t2);
+	get_rid_by_alphas(t2);
+	print_tableau(t2);
 }

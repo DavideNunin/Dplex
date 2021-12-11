@@ -17,14 +17,12 @@ bool is_prob_comp(tableau t){
 
 //mette il tableau in forma canonica
 
-tableau canonize(tableau t){
+void canonize(tableau t){
     int bias=t.cols-t.rows-1;
-    bool flag;
 	for(int i=1; i<t.rows; i++){
 		pivot p = {i,i+bias};
-		flag=do_pivot(t,p);
+		bool flag = do_pivot(t,p);
 	}
-	return t;
 }
 
 //crea il tableau del problema ausiliario
@@ -82,6 +80,7 @@ int is_col_in_base(tableau t, int c){       //restituisce o se la colonna c non 
 	if(cont1==1 && cont0==t.rows-2) return row;
 	return 0;
 }
+
 bool alpha_in_base(tableau t, bool inbase[]){
     for(int i=0;i<t.cols-1;i++)inbase[i]=false;
     int bias = t.cols-t.rows-1;     //ultima colonna delle X
@@ -97,7 +96,7 @@ bool alpha_in_base(tableau t, bool inbase[]){
     return flag;
 }
 
-tableau get_rid_by_alphas(tableau t){
+void get_rid_by_alphas(tableau t){
     int bias=t.cols-t.rows-1;   //ultima colonna delle x
     int donecol[bias+1];        //colonne su cui è stato fatto il pivot
     bool donerow[t.rows];       //righe su cui e stato fatto il pivot
@@ -115,17 +114,17 @@ tableau get_rid_by_alphas(tableau t){
             inbase[versor]=true;
         }
     }
-
+	/*
     for(int i=0;i<t.rows;i++)  cout<<inbase[i]<<" ";
     cout<<endl;
     for(int i=0;i<=bias;i++) cout<<donecol[i]<<" ";
-
+	*/
         for(int i=0;i<nx;i++){
             for(int j=1;j<t.rows;j++){
                 p={j,i};
                 if(inbase[j] && !donecol[i] && do_pivot(t,p)){
-                    print_tableau(t);
-                    cout<<endl;
+                   	// print_tableau(t);
+                    //cout<<endl;
                     donecol[i]=true;
                    inbase[j]=false; 
                    break;
@@ -133,29 +132,24 @@ tableau get_rid_by_alphas(tableau t){
             }
         }
     }
-    /*
-    p={3,5};
-    bool cazzo;
-    cazzo=do_pivot(t,p);
-    */
-    cout<<endl;
-    t=zeroize(t);
-	return t;    
+	//cout<<endl;
+    zeroize(t);    
 }
 
-void delete_alphas(tableau t){
+tableau delete_alphas(tableau t){
 	double ** new_tab;
 	int new_rows = t.rows;
 	int new_cols = t.cols - t.rows + 1;
-	new_tab =new double*[new_rows];
+	new_tab = new double*[new_rows];
+	
 	for(int i=0; i<new_rows; i++){
 		new_tab[i] = new double[new_cols];
 		for(int j=0; j<new_cols; j++)
 			new_tab[i][j] = t.tab[i][j];
 	}
-	t.tab = new_tab;
-	t.rows = new_rows;
-	t.cols = new_cols;
+	
+	tableau new_tableau = {new_tab, new_rows, new_cols};
+	return new_tableau;
 }
 
 void restore_fo(tableau t, problem p){

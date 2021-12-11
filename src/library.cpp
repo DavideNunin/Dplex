@@ -5,15 +5,23 @@ using namespace std;
 #include <iomanip>
 #include "header.h"
 
-//da stampare anche se il problema è di massimo o di minimo
+// il problema è di massimo o di minimo
+
 void print_problem(problem m){
-    cout<<"Matrice\n";
-    cout<<"z = ";
-    for(int i=0;i<m.cols;i++){
+    cout<<"Problema di PL\n";
+	cout<<setw(12)<<"";
+	
+	for(int i=0; i<m.cols; i++)
+		cout<<setw(12)<<"x_"<<i+1;
+    
+	cout<<"\n"<<setw(12)<<"z =";
+    
+	for(int i=0;i<m.cols;i++)
         cout<<setw(12)<<m.f[i]<<" ";
-    }
-    cout<<endl;
+    cout<<"\n";
+
     for(int i=0;i<m.rows;i++){
+		cout<<setw(11)<<"vincolo_"<<i+1;
         for(int j=0;j<m.cols;j++){
             cout<<setw(12)<<m.A[i][j]<<" ";
         }
@@ -22,18 +30,18 @@ void print_problem(problem m){
     }
     cout<<endl;
 }
-tableau zeroize(tableau t){
+
+void zeroize(tableau t){
     for(int i=0;i<t.rows;i++){
         for(int j=0;j<t.cols;j++){
             if(t.tab[i][j]<0.00000000000001 && t.tab[i][j]>-0.00000000000001)
                 t.tab[i][j]=0;
         }
     }
-    return t;
 }
 
 void print_tableau(tableau t){
-	cout<<"Tableau:\n";
+	cout<<"Tableau: ";
 	cout<<t.rows<<" x "<<t.cols<<"\n";
 	for(int i=0; i<t.rows; i++){
 		for(int j=0;j<t.cols;j++)
