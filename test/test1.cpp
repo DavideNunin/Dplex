@@ -38,32 +38,10 @@ void test_phase_1(){
 	print_problem(p);
 	tableau t = prob_to_tab(p);
 	print_tableau(t);
-    
-	cout<<"Problema ausiliario\n";
-	t=make_aux_prob(t);
-    print_tableau(t);
-
-	cout<<"Problema ausiliario in forma canonica\n";
-    canonize(t);
-    print_tableau(t);
-	
-	cout<<"Problema ausiliario con uscita di variabili artificiali\n";
-    get_rid_by_alphas(t);
-	print_tableau(t);
-	
-	cout<<"Problema senza variabili artificiali\n";
-	t = delete_alphas(t);
-	print_tableau(t);
-	
-	cout<<"Problema con funzione obiettivo ripristinata\n";
-	restore_fo(t,p);
-	print_tableau(t);
-
-	cout<<"Problema originale in forma canonica\n";
-	restore_canonic(t);
-	print_tableau(t);
-
-
+    t = phase1(t, p);
+	cout<<"Eseguendo fase 2 su problema originale...\n";
+	t = phase2(t,p.dir);
+	cout<<"La soluzione ottima è "<<-t.tab[0][t.cols-1]<<"\n";
 }
 
 int main(){

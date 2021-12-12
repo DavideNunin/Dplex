@@ -8,7 +8,12 @@ using namespace std;
 // il problema è di massimo o di minimo
 
 void print_problem(problem m){
-    cout<<"Problema di PL\n";
+    
+	if(m.dir == 1)
+		cout<<"Problema di massimo"<<"\n";
+	else
+		cout<<"Problema di minimo"<<"\n";
+	
 	cout<<setw(12)<<"";
 	
 	for(int i=0; i<m.cols; i++)
@@ -32,10 +37,11 @@ void print_problem(problem m){
 }
 
 void zeroize(tableau t){
+	double eps = 0.00000000000001; 
     for(int i=0;i<t.rows;i++){
         for(int j=0;j<t.cols;j++){
-            if(t.tab[i][j]<0.00000000000001 && t.tab[i][j]>-0.00000000000001)
-                t.tab[i][j]=0;
+            if(t.tab[i][j]<eps && t.tab[i][j]>-eps)
+				t.tab[i][j] = 0 * 1;
         }
     }
 }

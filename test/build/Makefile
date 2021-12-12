@@ -196,6 +196,33 @@ home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
 .PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp.s
 
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.o: home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.o
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.o
+
+# target to build an object file
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.o
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.o
+
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.i: home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.i
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.i
+
+# target to preprocess a source file
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.i
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.i
+
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.s: home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.s
+
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.s
+
+# target to generate assembly for a file
+home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.s
+.PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.cpp.s
+
 home/vitoska/Desktop/Simplesso/DPLEX/src/solve.o: home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp.o
 
 .PHONY : home/vitoska/Desktop/Simplesso/DPLEX/src/solve.o
@@ -292,6 +319,9 @@ help:
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.o"
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.i"
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.s"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.o"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.i"
+	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/phase2.s"
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/solve.o"
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/solve.i"
 	@echo "... home/vitoska/Desktop/Simplesso/DPLEX/src/solve.s"

@@ -8,7 +8,6 @@ struct problem{
     double *f;
 };
 
-//aggiungere 1 o -1 se il problema è di massimo o di minimo
 struct tableau{
     double **tab;
     int rows;
@@ -36,12 +35,16 @@ tableau prob_to_tab(problem p);
 void zeroize(tableau t);
 
 //phase1.cpp
-tableau make_aux_prob(tableau t);
 void canonize(tableau t);
+tableau make_aux_prob(tableau t);
 void get_rid_by_alphas(tableau t);
 tableau delete_alphas(tableau t);
 void restore_fo(tableau t, problem p);
 void restore_canonic(tableau t);
+tableau phase1(tableau t, problem p);
+
+//phase2.cpp
+tableau phase2(tableau t, int dir);
 
 //test1.cpp
 void test_phase1();

@@ -136,6 +136,12 @@ void get_rid_by_alphas(tableau t){
     zeroize(t);    
 }
 
+//verifica compatibilità problema
+
+bool is_compatible(tableau t){
+	return t.tab[0][t.cols-1] == 0;
+}
+
 tableau delete_alphas(tableau t){
 	double ** new_tab;
 	int new_rows = t.rows;
@@ -144,9 +150,13 @@ tableau delete_alphas(tableau t){
 	
 	for(int i=0; i<new_rows; i++){
 		new_tab[i] = new double[new_cols];
-		for(int j=0; j<new_cols; j++)
+		for(int j=0; j<new_cols-1; j++)
 			new_tab[i][j] = t.tab[i][j];
 	}
+
+	for(int i=0; i<new_rows; i++)
+		new_tab[i][new_cols-1] = t.tab[i][t.cols-1];
+	
 	
 	tableau new_tableau = {new_tab, new_rows, new_cols};
 	return new_tableau;
@@ -164,4 +174,39 @@ void restore_canonic(tableau t){
 			bool tmp = do_pivot(t,p);
 		}
 	}
+}
+
+tableau phase1(tableau t, problem p){
+	cout<<"Problema ausiliario\n";
+	t=make_aux_prob(t);
+    print_tableau(t);
+
+	cout<<"Problema ausiliario in forma canonica\n";
+    canonize(t);
+    print_tableau(t);
+	
+	cout<<"Eseguendo fase 2 su problema ausiliario ...\n";
+	phase2(t, -1);
+
+	if(is_compatible(t)){
+		cout<<"Problema ausiliario con uscita di variabili artificiali\n";
+    	get_rid_by_alphas(t);
+		print_tableau(t);
+	
+		cout<<"Problema senza variabili artificiali\n";
+		t = delete_alphas(t);
+		print_tableau(t);
+	
+		cout<<"Problema con funzione obiettivo ripristinata\n";
+		restore_fo(t,p);
+		print_tableau(t);
+
+		cout<<"Problema originale in forma canonica\n";
+		restore_canonic(t);
+		print_tableau(t);
+	}
+	else{
+		cout<<"Il problema è vuoto\n";
+	}
+	return t;
 }
