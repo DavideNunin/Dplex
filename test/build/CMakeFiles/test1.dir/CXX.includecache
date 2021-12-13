@@ -8,14 +8,12 @@
 
 /home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
 
-/home/vitoska/Desktop/Simplesso/DPLEX/src/phase1.cpp
+/home/vitoska/Desktop/Simplesso/DPLEX/src/solve.cpp
 iostream
 -
 stdio.h
 -
 stdlib.h
--
-iomanip
 -
 header.h
 /home/vitoska/Desktop/Simplesso/DPLEX/src/header.h
