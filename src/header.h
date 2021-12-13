@@ -19,32 +19,32 @@ struct pivot{
 	int c;
 };
 
-int withparam(int argv, char** argchar);
-void solve(problem m);
-void get_b(double* b, int r);
-void get_f(double* f, int c);
-void get_A(double** A,int r,int c);
+int withparam(int, char**);
+void solve(problem);
+void get_b(double*, int);
+void get_f(double*, int);
+void get_A(double**,int,int);
 
 
 //library.cpp
 
-void print_problem(problem m);
-void print_tableau(tableau t);
-bool do_pivot(tableau m, pivot p);
-tableau prob_to_tab(problem p);
-void zeroize(tableau t);
+//io
+void print_problem(problem);
+void print_tableau(tableau);
+problem read_prob_from_file(char []);
+
+//utils
+bool do_pivot(tableau, pivot);
+tableau prob_to_tab(problem);
+void zeroize(tableau);
 
 //phase1.cpp
-void canonize(tableau t);
-tableau make_aux_prob(tableau t);
-void get_rid_by_alphas(tableau t);
-tableau delete_alphas(tableau t);
-void restore_fo(tableau t, problem p);
-void restore_canonic(tableau t);
-tableau phase1(tableau t, problem p);
+bool is_prob_empty(tableau);
+tableau phase1(tableau, problem);
 
 //phase2.cpp
-tableau phase2(tableau t, int dir);
+bool is_prob_unbounded(tableau, int);
+tableau phase2(tableau, int);
 
 //test1.cpp
 void test_phase1();

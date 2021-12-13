@@ -68,9 +68,9 @@ tableau phase2(tableau t, int dir){
 		
 		pivot p = bland_rule(t, dir);
 		bool flag = do_pivot(t,p);
-		cout<<"Op. di pivot n°"<<++cont<<"\n";
-		zeroize(t);
-		print_tableau(t);
+		//cout<<"Op. di pivot n°"<<++cont<<"\n";	
+		//print_tableau(t);
 	}
+	zeroize(t);
 	return t;
 }

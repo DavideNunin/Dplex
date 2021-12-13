@@ -138,7 +138,7 @@ void get_rid_by_alphas(tableau t){
 
 //verifica compatibilità problema
 
-bool is_compatible(tableau t){
+bool is_prob_empty(tableau t){
 	return t.tab[0][t.cols-1] == 0;
 }
 
@@ -174,34 +174,36 @@ void restore_canonic(tableau t){
 			bool tmp = do_pivot(t,p);
 		}
 	}
+	zeroize(t);
 }
 
 tableau phase1(tableau t, problem p){
-	cout<<"Problema ausiliario\n";
+	cout<<"Problema ausiliario\n\n";
 	t=make_aux_prob(t);
     print_tableau(t);
 
-	cout<<"Problema ausiliario in forma canonica\n";
+	cout<<"Problema ausiliario in forma canonica\n\n";
     canonize(t);
     print_tableau(t);
 	
-	cout<<"Eseguendo fase 2 su problema ausiliario ...\n";
+	cout<<"Eseguendo fase 2 su problema ausiliario ...\n\n";
 	phase2(t, -1);
+	print_tableau(t);
 
-	if(is_compatible(t)){
-		cout<<"Problema ausiliario con uscita di variabili artificiali\n";
+	if(is_prob_empty(t)){
+		cout<<"Problema ausiliario con uscita di variabili artificiali\n\n";
     	get_rid_by_alphas(t);
 		print_tableau(t);
 	
-		cout<<"Problema senza variabili artificiali\n";
+		cout<<"Problema senza variabili artificiali\n\n";
 		t = delete_alphas(t);
 		print_tableau(t);
 	
-		cout<<"Problema con funzione obiettivo ripristinata\n";
+		cout<<"Problema con funzione obiettivo ripristinata\n\n";
 		restore_fo(t,p);
 		print_tableau(t);
 
-		cout<<"Problema originale in forma canonica\n";
+		cout<<"Problema originale in forma canonica\n\n";
 		restore_canonic(t);
 		print_tableau(t);
 	}

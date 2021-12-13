@@ -3,12 +3,15 @@
 #include<stdlib.h>
 using namespace std;
 #include <iomanip>
+#include <fstream>
 #include "header.h"
 
 // il problema è di massimo o di minimo
 
 void print_problem(problem m){
     
+	cout<<"\n";
+
 	if(m.dir == 1)
 		cout<<"Problema di massimo"<<"\n";
 	else
@@ -47,7 +50,7 @@ void zeroize(tableau t){
 }
 
 void print_tableau(tableau t){
-	cout<<"Tableau: ";
+	cout<<"\nTableau: ";
 	cout<<t.rows<<" x "<<t.cols<<"\n";
 	for(int i=0; i<t.rows; i++){
 		for(int j=0;j<t.cols;j++)
@@ -67,7 +70,7 @@ bool is_cell_valid(pivot p, tableau m){
 
 bool do_pivot(tableau m, pivot p){
        if (!is_cell_valid(p,m) ){
-           cout<<"Cella non valida per l'operazione di pivot "<<p.r<<" "<<p.c<<endl;
+           //cout<<"Cella non valida per l'operazione di pivot "<<p.r<<" "<<p.c<<endl;
            return false;
        }
        else{
@@ -110,31 +113,36 @@ tableau prob_to_tab(problem p){
 	return t;
 }
 
-/*
-//non è detto che serva
-problem tab_to_prob(tableau t){
+problem read_prob_from_file(char file[]){
+	fstream in;
+	in.open(file,ios::in);
+    
+	int r,c;
+    in>>r;
+    in>>c;
 	
-	double A[t.rows-1][t.cols-1];
-	double b[t.rows-1];
-	double f[t.cols-1];
-	
-	for(int i=0; i < t.cols-1; i++)
-		f[i] = t.tab[0][i];
-	
-	for(int i=1; i < t.rows; i++)
-		b[i] = t.tab[i][t.cols-1];
-
-	for(int i=1; i < t.rows; i++){
-		for(int j=0; j < t.cols-1; j++)
-			A[i-1][j] = M[i][j];	
-	}
-
-	//valore funzione obiettivo
-	
-	problem p = {A, t.rows-1, t.cols-1, b, f};
+    double **A;
+    double *b;
+    double *f;
+    
+	f = new double[c];
+    b = new double[r];
+    A = new double*[r];
+    
+	for(int i=0;i<c;i++)
+        in>>f[i];
+    
+	for(int i=0;i<r;i++){
+        A[i]=new double[c];
+        for(int j=0;j<c;j++)
+            in>>A[i][j];
+        in>>b[i];
+    }
+    
+	in.close();
+	problem p = {1,A, r, c, b, f};
 	return p;
 }
-*/
 
 void get_b(double* b,int r){
     cout<<"inserisci il vettore b:"<<endl;
@@ -184,3 +192,29 @@ void get_A(double** A,int r,int c){
         }
     }
 }
+
+/*
+//non è detto che serva
+problem tab_to_prob(tableau t){
+	
+	double A[t.rows-1][t.cols-1];
+	double b[t.rows-1];
+	double f[t.cols-1];
+	
+	for(int i=0; i < t.cols-1; i++)
+		f[i] = t.tab[0][i];
+	
+	for(int i=1; i < t.rows; i++)
+		b[i] = t.tab[i][t.cols-1];
+
+	for(int i=1; i < t.rows; i++){
+		for(int j=0; j < t.cols-1; j++)
+			A[i-1][j] = M[i][j];	
+	}
+
+	//valore funzione obiettivo
+	
+	problem p = {A, t.rows-1, t.cols-1, b, f};
+	return p;
+}
+*/
